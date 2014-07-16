@@ -30,7 +30,8 @@ In the composer.json of your project, add :
         "1001pharmacies/dictionary": ">=1.0-dev"
     }
 
-Usage example : 
+Usage example
+------------- 
 
     <?php 
     // example.php
@@ -47,6 +48,8 @@ Usage example :
 
     $dictionary        = new Dictionary();
     $dictionary[$term] = $definition;
+
+You could use a dictionary with [type restriction](doc/types).
 
 Running Tests
 -------------
