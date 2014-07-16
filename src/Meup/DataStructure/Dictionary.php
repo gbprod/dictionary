@@ -57,7 +57,7 @@ class Dictionary implements \ArrayAccess
 	 */
 	private function checkOffset($offset)
 	{
-		if ($this->offsetClass && !$this->offsetClass->isInstance($offset)) {
+		if ($this->offsetClass && (!is_object($offset) || !$this->offsetClass->isInstance($offset))) {
 			throw new \InvalidArgumentException();
 		}
 	}
@@ -68,7 +68,7 @@ class Dictionary implements \ArrayAccess
 	 */
 	public function checkValue($value)
 	{
-		if ($this->valueClass && !$this->valueClass->isInstance($offset)) {
+		if ($this->valueClass && (!is_object($value) || !$this->valueClass->isInstance($value))) {
 			throw new \InvalidArgumentException();
 		}
 	}
@@ -81,7 +81,7 @@ class Dictionary implements \ArrayAccess
 	public function offsetExists($offset) 
 	{
 		$this->checkOffset($offset);
-		return array_key_exists($offset, $this->offsets);
+		return in_array($offset, $this->offsets);
 	}
 
 	/**
@@ -102,6 +102,7 @@ class Dictionary implements \ArrayAccess
 	public function offsetSet($offset, $value)
 	{
 		$this->checkOffset($offset);
+		$this->checkValue($value);
 		$this->values[(array_push($this->offsets, $offset))-1] = $value;
 	}
 

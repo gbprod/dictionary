@@ -11,16 +11,20 @@
          syntaxCheck="false"
          bootstrap="autoload.php.dist"
 >
-    <php>
-        <ini name="intl.default_locale" value="en"/>
-        <ini name="intl.error_level" value="0"/>
-        <ini name="memory_limit" value="-1"/>
-    </php>
 
     <testsuites>
         <testsuite name="Dictionary Test Suite">
-            <directory>./Tests/</directory>
+            <directory>./src/Meup/*/Tests</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+            <exclude>
+                <directory>./vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 
 </phpunit>

@@ -39,13 +39,14 @@ Usage example :
 
     use Meup\DataStructure\Dictionary;
 
-    $term        = new stdClass();
-    $term->label = 'Lorem ipsum dolor sit amet';
-    $def         = new stdClass();
-    $def->label  = 'Some sample text in latin';
-    
+    $term              = new stdClass();
+    $term->label       = 'Lorem ipsum dolor sit amet';
+
+    $definition        = new stdClass();
+    $definition->label = 'Some sample text in latin';
+
     $dictionary        = new Dictionary();
-    $dictionary[$term] = $def;
+    $dictionary[$term] = $definition;
 
 Running Tests
 -------------
