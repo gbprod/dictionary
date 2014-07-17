@@ -49,7 +49,7 @@ Usage example
     $dictionary        = new Dictionary();
     $dictionary[$term] = $definition;
 
-You could use a dictionary with [type restriction](doc/types).
+You could use a dictionary with [type restriction](doc/types.md).
 
 Running Tests
 -------------
