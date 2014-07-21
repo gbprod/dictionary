@@ -14,7 +14,7 @@ namespace Meup\DataStructure;
 /**
  * @author Thomas G. <thomas@1001pharmacies.com>
  */
-class Dictionary implements \ArrayAccess
+class Dictionary implements \Countable, \ArrayAccess
 {
 	/**
 	 * @var array
@@ -116,5 +116,10 @@ class Dictionary implements \ArrayAccess
 		unset($this->offsets[$i], $this->values[$i]);
 		$this->offsets = array_values($this->offsets);
 		$this->values  = array_values($this->values);
+	}
+
+	public function count()
+	{
+		return count($this->values);
 	}
 }
