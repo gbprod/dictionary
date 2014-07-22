@@ -59,3 +59,5 @@ Complete implementation
 	$dictionary = new $dictionary('\myTerm', '\myDefinition');
 
 	$dictionary[$term] = $definition;
+
+To go further, you should probably see how make your own [custom dictionaries](inheritance.md)
