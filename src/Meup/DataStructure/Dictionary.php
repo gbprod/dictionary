@@ -60,7 +60,7 @@ class Dictionary implements \Iterator, \Countable, \ArrayAccess
      * @param mixed $offset
      * @return void
      */
-    private function checkOffset($offset)
+    protected function checkOffset($offset)
     {
         if ($this->offsetClass && (!is_object($offset) || !$this->offsetClass->isInstance($offset))) {
             throw new \InvalidArgumentException();
@@ -71,7 +71,7 @@ class Dictionary implements \Iterator, \Countable, \ArrayAccess
      * @param mixed $value
      * @return void
      */
-    public function checkValue($value)
+    protected function checkValue($value)
     {
         if ($this->valueClass && (!is_object($value) || !$this->valueClass->isInstance($value))) {
             throw new \InvalidArgumentException();
