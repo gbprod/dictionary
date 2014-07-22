@@ -31,6 +31,6 @@ class CountableTest extends BaseTestCase
 
         $dictionary[$term] = $definition;
 
-        $this->assertEquals(count($dictionary[$term]), 1);
+        $this->assertEquals(count($dictionary), 1);
     }
 }
