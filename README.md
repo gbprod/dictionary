@@ -1,7 +1,7 @@
 Dictionary Class
 ================
 
-[![Build Status](https://secure.travis-ci.org/1001pharmacies/dictionary.svg?branch=master)](http://travis-ci.org/1001pharmacies/dictionary)
+[![Build Status](https://secure.travis-ci.org/1001Pharmacies/dictionary.svg?branch=master)](http://travis-ci.org/1001Pharmacies/dictionary)
 
 A simple class to manipulate Dictionary datastructures within PHP.
 
