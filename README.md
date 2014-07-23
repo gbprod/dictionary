@@ -1,10 +1,13 @@
-Dictionary Class
-================
+Dictionary
+==========
 
 [![Build Status](https://secure.travis-ci.org/1001Pharmacies/dictionary.svg?branch=master)](http://travis-ci.org/1001Pharmacies/dictionary) [![Total Downloads](https://poser.pugx.org/1001Pharmacies/dictionary/downloads.png)](https://packagist.org/packages/1001Pharmacies/dictionary) [![Latest Stable Version](https://poser.pugx.org/1001Pharmacies/dictionary/v/stable.png)](https://packagist.org/packages/1001Pharmacies/dictionary)
 
-
 A simple class to manipulate Dictionary datastructures within PHP.
+
+You probably dreamed one day to use objects as array indexes. So, that's what this library does.
+
+    $dictionary[new YourClass()] = '';
 
 Installation
 ------------
