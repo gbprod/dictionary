@@ -23,14 +23,8 @@ And then install the project :
 
 In the composer.json of your project, add :
 
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/1001Pharmacies/dictionary.git"
-        }
-    ],
     "require": {
-        "1001pharmacies/dictionary": ">=1.0-dev"
+        "1001pharmacies/dictionary": "0.*"
     }
 
 Usage example
