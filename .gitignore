@@ -1,5 +1,4 @@
 /vendor/
-/coverage/
 phpunit.xml
 composer.lock
 composer.phar
