@@ -2,6 +2,7 @@
 
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
+         coverageText="true"
          colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
@@ -27,5 +28,9 @@
             </exclude>
         </whitelist>
     </filter>
+
+    <logging>
+      <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+    </logging>
 
 </phpunit>
