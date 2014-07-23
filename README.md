@@ -62,3 +62,8 @@ To run tests, execute the command :
     vendor/bin/phpunit
 
 Or you could use your global installation of PHPUnit to do so.
+
+Compatibility
+-------------
+
+You need to use `PHP 5.5` (or greater version) to enjoy this library. The `Iterator::key()` method could not return anything else than a scalar value ([read more about this](http://php.net/manual/fr/iterator.key.php#112530)).
