@@ -4,16 +4,14 @@
     <target name="help">
         <echo>
         help     Shows this help
-        phpunit  Executes phpunit tests
+        tests    Run tests
         phpcs    Detects standard violations on the code.
+        phpcpd   Detects duplicate code portions.
+        phpunit  Executes phpunit tests
         </echo>
-</target>
-
-    <target name="test" depends="phpcs,phpunit">
     </target>
 
-    <target name="phpunit">
-        <exec logoutput="true" dir="./" command="./vendor/bin/phpunit" />
+    <target name="test" depends="phpcs,phpcpd,phpunit">
     </target>
 
     <target name="phpcs">
@@ -27,6 +25,14 @@
                 <include name="**/*.php"/>
             </fileset>
         </phpcodesniffer>
+    </target>
+
+    <target name="phpcpd">
+        <exec logoutput="true" dir="./" command="./vendor/bin/phpcpd ./src" />
+    </target>
+
+    <target name="phpunit">
+        <exec logoutput="true" dir="./" command="./vendor/bin/phpunit" />
     </target>
 
 </project>
