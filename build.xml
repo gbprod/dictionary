@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<project name="Meup Dictionary" basedir="./" default="help">
+
+    <target name="help">
+        <echo>
+        help     Shows this help
+        phpunit  Executes phpunit tests
+        phpcs    Detects standard violations on the code.
+        </echo>
+</target>
+
+    <target name="test" depends="phpcs,phpunit">
+    </target>
+
+    <target name="phpunit">
+        <exec logoutput="true" dir="./" command="./vendor/bin/phpunit" />
+    </target>
+
+    <target name="phpcs">
+        <phpcodesniffer standard="PSR1">
+            <fileset dir="./src">
+                <include name="**/*.php"/>
+            </fileset>
+        </phpcodesniffer>
+        <phpcodesniffer standard="PSR2">
+            <fileset dir="./src">
+                <include name="**/*.php"/>
+            </fileset>
+        </phpcodesniffer>
+    </target>
+
+</project>

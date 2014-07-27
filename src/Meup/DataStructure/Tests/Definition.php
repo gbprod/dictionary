@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Meup\DataStructure\Dictionary\Tests;
+namespace Meup\DataStructure\Tests;
 
 class Definition
 {

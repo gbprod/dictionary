@@ -13,6 +13,8 @@ namespace Meup\DataStructure\Dictionary\Tests;
 
 use \PHPUnit_Framework_TestCase as BaseTestCase;
 use Meup\DataStructure\AutoIndexedDictionary;
+use Meup\DataStructure\Tests\Term;
+use Meup\DataStructure\Tests\Definition;
 
 /**
  * @author Thomas G. <thomas@1001pharmacies.com>
@@ -23,7 +25,7 @@ class AutoIndexedDictionaryTest extends BaseTestCase
     {
         $term       = new Term('Lorem ipsum dolor sit amet');
         $definition = new Definition($term, 'Some sample text in latin');
-        $dictionary = new AutoIndexedDictionary('Meup\DataStructure\Dictionary\Tests\Definition', 'getTerm');
+        $dictionary = new AutoIndexedDictionary('Meup\DataStructure\Tests\Definition', 'getTerm');
 
         $dictionary[] = $definition;
 
@@ -33,7 +35,7 @@ class AutoIndexedDictionaryTest extends BaseTestCase
     {
         $term       = new Term('Lorem ipsum dolor sit amet');
         $definition = new Definition($term, 'Some sample text in latin');
-        $dictionary = new AutoIndexedDictionary('Meup\DataStructure\Dictionary\Tests\Definition', 'getTerm');
+        $dictionary = new AutoIndexedDictionary('Meup\DataStructure\Tests\Definition', 'getTerm');
 
         $dictionary[$term] = $definition;
 
@@ -45,7 +47,7 @@ class AutoIndexedDictionaryTest extends BaseTestCase
         $definition1 = new Definition($term1, 'Some sample text in latin');
         $term2       = new Term('Lorem ipsum dolor sit amet');
         $definition2 = new Definition($term2, 'Some sample text in latin');
-        $dictionary  = new AutoIndexedDictionary('Meup\DataStructure\Dictionary\Tests\Definition', 'getTerm');
+        $dictionary  = new AutoIndexedDictionary('Meup\DataStructure\Tests\Definition', 'getTerm');
 
         $this->setExpectedException('InvalidArgumentException');
 
