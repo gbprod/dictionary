@@ -11,10 +11,8 @@
 
 namespace Meup\DataStructure\Dictionary\Tests;
 
-use 
-    \PHPUnit_Framework_TestCase as BaseTestCase,
-    Meup\DataStructure\AutoIndexedDictionary
-;
+use \PHPUnit_Framework_TestCase as BaseTestCase;
+use Meup\DataStructure\AutoIndexedDictionary;
 
 /**
  * @author Thomas G. <thomas@1001pharmacies.com>
@@ -54,37 +52,4 @@ class AutoIndexedDictionaryTest extends BaseTestCase
         $dictionary[$term1] = $definition1;
         $dictionary[$term1] = $definition2;
     }
-}
-
-/** @toDo use mocks, and not this classes **/
-class Term
-{
-    private $label;
-    public function __construct($label)
-    {
-        $this->label = $label;
-    }
-    public function getLabel()
-    {
-        return $this->label;
-    }
-}
-
-class Definition
-{
-    private $term, $text;
-    public function __construct(Term $term, $text)
-    {
-        $this->term = $term;
-        $this->text = $text;
-    }
-    public function getTerm()
-    {
-        return $this->term;
-    }
-    public function getText()
-    {
-        return $this->text;
-    }
-
 }

@@ -32,7 +32,7 @@ class AutoIndexedDictionary extends Dictionary
      * @param array $offsetArgs
      * @return void
      */
-    public function __construct($valueClassName, $offsetMethod, array $offsetArgs=array())
+    public function __construct($valueClassName, $offsetMethod, array $offsetArgs = array())
     {
         $this->offsetMethod = new \ReflectionMethod($valueClassName, $offsetMethod);
         $this->offsetArgs   = $offsetArgs;

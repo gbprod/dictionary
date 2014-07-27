@@ -46,7 +46,7 @@ class Dictionary implements \Iterator, \Countable, \ArrayAccess
      * @param $valueClassName
      * @return void
      */
-    public function __construct($offsetClassName=null, $valueClassName=null)
+    public function __construct($offsetClassName = null, $valueClassName = null)
     {
         if ($offsetClassName) {
             $this->offsetClass = new \ReflectionClass($offsetClassName);
@@ -83,7 +83,7 @@ class Dictionary implements \Iterator, \Countable, \ArrayAccess
      * @return boolean
      * @throws InvalidArgumentException if $offset is not an instance of the restricted class
      */
-    public function offsetExists($offset) 
+    public function offsetExists($offset)
     {
         $this->checkOffset($offset);
         return in_array($offset, $this->offsets);
@@ -115,7 +115,8 @@ class Dictionary implements \Iterator, \Countable, \ArrayAccess
      * @param mixed $offset
      * @return void
      */
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset)
+    {
         $this->checkOffset($offset);
         $i = array_search($offset, $this->offsets, true);
         unset($this->offsets[$i], $this->values[$i]);

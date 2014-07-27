@@ -11,10 +11,8 @@
 
 namespace Meup\DataStructure\Dictionary\Tests;
 
-use 
-    \PHPUnit_Framework_TestCase as BaseTestCase,
-    Meup\DataStructure\Dictionary
-;
+use \PHPUnit_Framework_TestCase as BaseTestCase;
+use Meup\DataStructure\Dictionary;
 
 /**
  * @author Thomas G. <thomas@1001pharmacies.com>
