@@ -96,7 +96,7 @@ class Dictionary implements \Iterator, \Countable, \ArrayAccess
     public function offsetGet($offset)
     {
         $this->checkOffset($offset);
-        return $this->values[array_search($offset, $this->offsets, true)];
+        return $this->offsetExists($offset) ? $this->values[array_search($offset, $this->offsets, true)] : null;
     }
 
     /**

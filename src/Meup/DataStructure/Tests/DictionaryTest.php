@@ -91,4 +91,14 @@ class DictionaryTest extends BaseTestCase
 
         $this->assertFalse($dictionary->offsetExists($term));
     }
+    public function testOffsetGetWithoutResult()
+    {
+        $term       = uniqid();
+        $definition = uniqid();
+        $dictionary = new Dictionary();
+
+        $dictionary[$term] = $definition;
+
+        $this->assertNull($dictionary[uniqid()]);
+    }
 }
