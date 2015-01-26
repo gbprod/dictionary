@@ -2,6 +2,7 @@
     "name": "1001pharmacies/dictionary",
     "description": "A PHP library to manipulate Dictionary datastructure",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "methylbro",
